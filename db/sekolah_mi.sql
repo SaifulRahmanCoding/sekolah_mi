@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2022 at 01:03 AM
+-- Generation Time: Sep 04, 2022 at 01:17 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -109,7 +109,10 @@ INSERT INTO `guru` (`id`, `foto`, `nama`, `jabatan`) VALUES
 (3, '../../assets/img/guru/heriyanto, S.Pd.SD, Wali Kls 3.JPG', 'Heriyanto, S.Pd.', 'Wali Kelas 3'),
 (4, '../../assets/img/guru/rizka hidayati, S.Pd.SD, Wali Kls 1.JPG', 'Rizka Hidayati, S.Pd.SD', 'Wali Kelas 1'),
 (5, '../../assets/img/guru/Halima, S.Pd.I, Gr Bhs Arab.JPG', 'Halima, S.Pd.I.', 'Guru Bahasa Arab'),
-(6, '../../assets/img/guru/Ponco Erwanoe, S.Pd.I, Wali Kls 4.jpg', 'Ponco Erwanoe, S.Pd.I.', 'Wali Kelas 4');
+(6, '../../assets/img/guru/Ponco Erwanoe, S.Pd.I, Wali Kls 4.jpg', 'Ponco Erwanoe, S.Pd.I.', 'Wali Kelas 4'),
+(7, '../../assets/img/guru/ASTUTIK, S.Pd.I, gr Fiqih.JPG', 'Astutik, S.Pd.I', 'Guru Fiqih'),
+(8, '../../assets/img/guru/EVI Herliyanti, S.Pd.I, Gr Qurdis.JPG', 'Evi Herliyanti, S.Pd.I', 'Guru Al-Qur`an Hadits'),
+(9, '../../assets/img/guru/prili Utami Dewi Pramesty, Wali Kls 5.jpg', 'Prili Utami Dewi Pramesty', 'Wali Kelas 5');
 
 -- --------------------------------------------------------
 
@@ -133,9 +136,8 @@ CREATE TABLE `pengumuman` (
 
 INSERT INTO `pengumuman` (`id`, `judul`, `tanggal`, `jam_awal`, `jam_akhir`, `keterangan`, `jenis`) VALUES
 (1, 'Perilisan Website Sekolah MI Nurul Hikmah Silolemb', '2022-09-10', '00:00:00', '00:00:00', 'Dengan adanya website sekolah, diharapkan dapat meningkatkan fasilitas pelayanan sekolah terhadap murid dan wali murid.', 'pengumuman'),
-(2, 'Kunjungan Anak-Anak KKN Universitas Ibrahimy', '2022-08-26', '20:00:00', '23:59:00', 'Sosialiasi program kerja anak anak KKN', 'agenda'),
-(3, 'Konsultasi Pembangunan Website Peserta KKN', '2022-09-01', '20:00:00', '23:40:00', 'Tim IT KKN membangun website sekolah', 'agenda'),
-(4, 'Main Catur Bareng ', '2022-09-01', '09:15:00', '09:31:00', 'Menambah Keakraban Dengan Siswa MI', 'pengumuman'),
+(2, 'Kunjungan Anak-Anak KKN Universitas Ibrahimy', '2022-08-26', '08:00:00', '11:59:00', 'Sosialiasi program kerja anak anak KKN', 'agenda'),
+(3, 'Konsultasi Pembangunan Website Peserta KKN', '2022-09-01', '08:00:00', '11:40:00', 'Tim IT KKN membangun website sekolah', 'agenda'),
 (5, 'Konsultasi Psikologi', '2022-09-03', '07:30:00', '10:30:00', 'Peserta KKN Unuiversitas Ibrahimy Melakukan Pelayanan Tentang Psikologi Siswa ', 'agenda');
 
 -- --------------------------------------------------------
@@ -277,7 +279,7 @@ ALTER TABLE `dokumentasi`
 -- AUTO_INCREMENT for table `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `pengumuman`
