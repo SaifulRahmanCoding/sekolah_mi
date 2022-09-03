@@ -1,0 +1,368 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nav-list li {
+  display: inline;
+}
+
+.nav-list li a {
+  font-size: 17px;
+  padding-bottom: 12px;
+}
+
+#header button {
+  display: none;
+}
+
+.nav-list li a:hover {
+  padding-bottom: 15px;
+  color: #21ac34 !important;
+  transition: 0.3s;
+  box-shadow: 0px 4px 0px -2px #21ac34;
+}
+
+.ket-sekolah a,
+#main-ket-sekolah .ket-sekolah p {
+  color: rgb(221, 221, 224);
+  font-size: 12px;
+}
+
+.ket-sekolah a:hover {
+  text-decoration: underline !important;
+}
+
+.ket-sekolah i {
+  color: #cbb58b;
+  font-size: 12px;
+}
+
+#main-ket-sekolah {
+  background-color: #292B2C;
+}
+
+nav ul {
+  margin-bottom: 0;
+}
+
+nav img,
+#footer img {
+  max-width: 50px;
+}
+
+.overlay-carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-item {
+  max-height: 585px;
+  position: relative;
+}
+
+#carouselMI img {
+  background-position: center;
+  height: 100%;
+  background-size: cover;
+}
+
+.icon-arrow-left.fa-slider,
+.icon-arrow-right.fa-slider {
+  border: 2px solid #cbb58b !important;
+  color: #cbb58b !important;
+}
+
+.main-content {
+  margin-top: 100px;
+}
+
+.foto-kepsek img {
+  max-width: 200px;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.wrap-tgl {
+  color: aliceblue;
+}
+
+.wrap-tgl {
+  background: #21ac34;
+  border-radius: 50%;
+}
+
+.wrap-dalam-tgl {
+  background: #1c922c;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+}
+
+.visi-misi ul {
+  list-style-type: decimal;
+}
+
+#pengumuman,
+#guru {
+  padding-top: 100px !important;
+}
+
+#content .card-body img {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.offcanvas {
+  max-width: 300px;
+}
+
+.offcanvas-header {
+  background-color: #282a2a;
+}
+
+.offcanvas-body li {
+  list-style: none;
+}
+
+#footer {
+  background-color: #282a2a;
+}
+
+#footer .kopi-kanan,
+.jam-pengumuman {
+  color: darkkhaki;
+}
+
+#footer ul {
+  padding-left: 0;
+}
+
+#footer li {
+  list-style: none;
+  text-align: center;
+  padding: 5px;
+}
+
+#footer li a {
+  text-decoration: none;
+  color: azure;
+}
+
+#footer li a:hover {
+  text-decoration: underline;
+  color: darkkhaki;
+}
+
+#footer .hubungi i {
+  color: darkkhaki !important;
+}
+
+#footer .hubungi i:hover {
+  color: azure !important;
+}
+
+/* dokumentasi */
+.dokumentasi .dokumentasi-item {
+  position: relative;
+  border: 1px solid var(--color-white);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dokumentasi .dokumentasi-item img {
+  transition: all 0.3s;
+}
+
+.dokumentasi .dokumentasi-item:before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 2;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.dokumentasi .dokumentasi-item .dokumentasi-info {
+  opacity: 0;
+  position: absolute;
+  inset: auto 40px 40px 40px;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  height: 100%;
+  width: 100%;
+  margin-left: -10px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dokumentasi .dokumentasi-item .dokumentasi-info h4 {
+  font-size: 22px;
+  font-weight: 600;
+  padding-right: 50px;
+}
+.dokumentasi .dokumentasi-item{
+  max-height: 205px;
+}
+
+.dokumentasi .dokumentasi-item .dokumentasi-info .preview-link {
+  position: absolute;
+  font-size: 20px;
+  top: calc(50% - 14px);
+  color: white;
+  transition: 0.3s;
+  line-height: 0;
+}
+
+.dokumentasi .dokumentasi-item .dokumentasi-info .preview-link:hover {
+  color: white !important;
+}
+
+.dokumentasi .dokumentasi-item .dokumentasi-info .details-link {
+  right: 14px;
+  font-size: 28px;
+}
+
+.dokumentasi .dokumentasi-item:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dokumentasi .dokumentasi-item:hover img {
+  transform: scale(1.2);
+}
+
+.dokumentasi .dokumentasi-item:hover .dokumentasi-info {
+  opacity: 1;
+  inset: auto 10px 0 10px;
+}
+
+/* end dokumentasi */
+
+/* about */
+.about img {
+  width: 100%;
+  background-size: cover;
+  border-radius: 50px 0px 50px 0px;
+}
+
+.about p {
+  text-align: justify;
+}
+.about img{
+  max-height: 500px;
+  object-fit: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#header .bars {
+  border-radius: 50%;
+  border: none !important;
+
+}
+
+#header .bars:hover {
+  border: none !important;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* end about */
+
+
+/* layar HP dan Tablet */
+@media screen and (max-width: 532px) {
+  .nav-list {
+    display: none !important;
+  }
+
+  .ket-sekolah p {
+    display: inline-block;
+  }
+
+  #header .top-header button {
+    display: inline-block;
+  }
+
+  #main-ket-sekolah p,
+  #main-ket-sekolah .icon-location-pin {
+    display: none;
+  }
+
+  #main-ket-sekolah .ket-hide {
+    display: inline;
+  }
+
+  .top-email {
+    margin-left: auto;
+  }
+
+  .icon-arrow-left.fa-slider,
+  .icon-arrow-right.fa-slider {
+    border: 1px solid #cbb58b !important;
+  }
+
+  .judul-sambutan {
+    text-align: center;
+  }
+
+  .body-sambutan {
+    text-align: justify;
+  }
+
+  .data-pengumuman p {
+    text-align: justify;
+  }
+
+  .offcanvas-body li {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .offcanvas-body li:hover {
+    padding-left: 5px;
+    border-left: 4px solid #21ac34;
+    transition: 0.3s;
+  }
+
+  .about {
+    margin-top: -50px;
+  }
+    .dokumentasi .dokumentasi-item {
+      max-height: 135px;
+    }
+}
+
+/* layar iPad */
+@media screen and (max-width: 768px) {
+  .nav-list {
+    display: none !important;
+  }
+
+  .offcanvas-body li {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .offcanvas-body li:hover {
+    padding-left: 5px;
+    border-left: 4px solid #21ac34;
+    transition: 0.3s;
+  }
+
+  #header .top-header button {
+    display: inline-block;
+  }
+
+  #main-ket-sekolah .ket-hide {
+    display: inline;
+  }
+
+  .top-email {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+body {
+    font-size: 14px;
+}
+
+/*Bagian Header*/
+#header {
+    border-bottom: 2px solid #cecece;
+}
+
+#header .logo span {
+    text-shadow: 1px 1px 1px grey;
+}
+
+#header .logo img {
+    max-height: 50px;
+}
+
+.bars {
+    border-radius: 50%;
+    border: none !important;
+}
+
+.bars:focus {
+    box-shadow: none;
+    border: none !important;
+}
+
+.bars:hover {
+    background-color: #eaeaea;
+    border: none !important;
+}
+
+table .hover-tr {
+    /* background-color: #eabd0a; */
+    background: #3d9e9e !important;
+}
+thead{
+    border-bottom: 2px solid #c1c1c1;
+}
+table td img{
+    max-width: 100px;
+}
+table td{
+    vertical-align: middle;
+}
+.modal-body img{
+    max-height: 100px;
+}
+
+/*End Bagian Header*/
+
+/*Bagian Content*/
+
+#sidebar {
+    border-right: 2px solid #cecece;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    transition: 0.4s;
+    background-color: white;
+    z-index: 99;
+}
+
+#sidebar .nav-link {
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+#sidebar .nav-link:hover {
+    background-color: #ececec;
+}
+.akun-admin .btn.dropdown-toggle{
+    border: none;
+}
+.akun-admin{
+    padding: 5px;
+    position: fixed; 
+    bottom: 0; 
+    width: 250px;
+    border-top: 2px solid #cecece;
+}
+.akun-admin img{
+    max-width: 30px;
+    border-radius: 50%;
+}
+.toggleHide {
+    margin-left: -250px;
+    transition: 0.4s;
+}
+
+.toggleExpand {
+    margin-left: 0px !important;
+}
+
+.content,
+.footer {
+    margin-left: 250px;
+    transition: 0.4s;
+}
+.p-Lain a:hover, .btn:hover{
+    background-color: black !important;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.akun-admin button:hover {
+    transform: none !important;
+    background-color: white !important;
+}
+#header button:hover{
+    transform: none !important;
+    background-color: #cacaca !important;
+
+}
+/*End Bagian Content*/
+
+
+/* login */
+#login,
+#registrasi {
+    position: relative;
+    top: 50px;
+    left: 0;
+}
+
+#login #logo img,
+#registrasi img {
+    max-width: 60px;
+}
+
+/*Bagian Footer*/
+#footer {
+    background: #b3b3b3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.img-cek-web{
+    background : url(../../assets/img/admin/cek-web.jpg);
+    width: 100%;
+    height: 100%;
+    max-height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img-cek-database{
+    background : url(../../assets/img/admin/phpmyadmin.png);
+    width: 100%;
+    height: 100%;
+    max-height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.cek-web a i, .cek-database a i{
+    transform:rotateX(45deg);
+}
+.cek-web a i:hover{
+    transform: scaleX(30px);
+}
+.p-Lain .btn.m-2{
+    width: 220px;
+    height: 50px;
+    vertical-align: middle;
+    padding-top: 12px;
+}
+
+/*End Bagian Footer*/
+
+/* layar HP */
+@media screen and (max-width: 540px) {
+
+    .handphone {
+        margin-left: -250px;
+
+    }
+
+    .toggleHide {
+        margin-left: 0px;
+        width: 100%;
+        transition: 0.4s;
+    }
+
+    .toggleExpand {
+        margin-left: 0px !important;
+    }
+
+    .content,
+    .footer {
+        margin-left: 0px;
+    }
+}
