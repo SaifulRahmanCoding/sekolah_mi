@@ -30,7 +30,8 @@
                 <?php echo ucwords($_SESSION['nama']); ?>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a href="logout.php" class="dropdown-item">Logout <i class="fa fa-sign-out-alt"></i></a></li>
+                <li><a href="newUser.php" class="dropdown-item"> <i class="fa fa-user-alt"></i> Buat Akun</a></li>
+                <li><a href="logout.php" class="dropdown-item"> <i class="fa fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </div>
     </div>
