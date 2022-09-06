@@ -14,6 +14,7 @@ $pecah_path_ucapan = (empty($s_ucapan['foto'])) ? "" : explode('../../', $s_ucap
                 <form action="controllers/lainControllers.php?jenis=ucapan" method="post" enctype="multipart/form-data">
                     <h5 class="fw-bolder">Preview Foto</h5>
                     <img src="<?php echo (empty($s_ucapan['foto'])) ? "../assets/img/avatar.jpg" : "../$pecah_path_ucapan[1]"; ?>" class="img-fluid mb-2" alt="...">
+                    <span class="text-danger">usahakan ukuran foto 1:1 atau Kotak</span>
                     <div class="form-group mb-2">
                         <label for="foto" class="mb-1">Foto</label>
                         <input type="file" name="foto" class="form-control" id="foto" />

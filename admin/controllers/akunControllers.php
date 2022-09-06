@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('../../assets/koneksi.php');
 // require('../../cekLogin.php');
 
@@ -64,25 +65,51 @@ if ($opsi == "update") {
         echo "username tidak ditemukan";
     }
     // batas
-    if (isset($_POST['username'])) {
-        $username = $_POST['username'];
+    if (isset($_POST['pass_lama'])) {
+        $pass_lama = $_POST['pass_lama'];
     } else {
-        echo "username tidak ditemukan";
+        echo "pass_lama tidak ditemukan";
     }
-    $query = "UPDATE user SET username = '$username', username = '$username' WHERE id = $id";
-    $update = mysqli_query($db, $query);
+    // batas
+    if (isset($_POST['pass_baru'])) {
+        $pass_baru = $_POST['pass_baru'];
+    } else {
+        echo "pass_baru tidak ditemukan";
+    }
 
-    if ($update == false) { ?>
+    $pass_lama = hash("sha256", $pass_lama);
+
+    $query = "SELECT password FROM user WHERE id=$id";
+    $result = mysqli_query($db, $query);
+    $Cpass = mysqli_fetch_assoc($result);
+
+    if ($Cpass['password'] != $pass_lama) { ?>
         <script type='text/javascript'>
-            alert('Gagal Mengubah Data User <?php echo $username ?>');
-            window.location.href = "../akun.php";
+            alert('Password Gagal Diubah, Karena Password Lama Tidak Sesuai Dengan Yang Anda Masukkan');
+            window.location.href = "../index.php";
         </script>
-    <?php } else { ?>
-        <script type='text/javascript'>
-            alert('Sukses Mengubah Data User <?php echo $username ?>');
-            window.location.href = "../akun.php";
-        </script>
-    <?php }
+
+        <?php } else {
+
+        $pass_baru = hash("sha256", $pass_baru);
+
+        $query = "UPDATE user SET username = '$username',password = '$pass_baru' WHERE id = $id";
+        $update = mysqli_query($db, $query);
+        if ($update == false) { ?>
+            <script type='text/javascript'>
+                alert('Gagal Mengubah Password User');
+                window.location.href = "../index.php";
+            </script>
+        <?php } else {
+            session_destroy(); ?>
+            <script type='text/javascript'>
+                alert('Sukses Mengubah Password User');
+                alert('Silahkan Login Kembali, Karena Password Yang Anda Ubah Adalah Akun Yang Sedang Anda Gunakan');
+                window.location.href = "../login.php";
+            </script>
+        <?php
+        }
+    }
 }
 
 // ubah password
@@ -114,7 +141,7 @@ if ($opsi == "updatePass") {
     if ($Cpass['password'] != $pass_lama) { ?>
         <script type='text/javascript'>
             alert('Password Gagal Diubah, Karena Password Lama Tidak Sesuai Dengan Yang Anda Masukkan');
-            window.location.href = "../akun.php";
+            window.location.href = "../index.php";
         </script>
 
         <?php } else {
@@ -127,7 +154,7 @@ if ($opsi == "updatePass") {
         if ($update == false) { ?>
             <script type='text/javascript'>
                 alert('Gagal Mengubah Password User');
-                window.location.href = "../akun.php";
+                window.location.href = "../index.php";
             </script>
             <?php } else {
             if ($sessionid == $id) {
@@ -145,45 +172,12 @@ if ($opsi == "updatePass") {
                 <!-- menuju menu akun -->
                 <script type='text/javascript'>
                     alert('Sukses Mengubah Password User');
-                    window.location.href = "../akun.php";
+                    window.location.href = "../index.php";
                 </script>
-        <?php
+<?php
             }
         }
     }
-}
-// opsi menghapus akun/user
-if ($opsi == "delete") {
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
-    } else {
-        echo "error id <a href='../akun.php'>Kembali</a>";
-    }
-
-    $query = "DELETE FROM user WHERE id = $id";
-    $delete = mysqli_query($db, $query);
-
-    // panggil data id_penduduk paling terakhir
-    $query = "SELECT id,username FROM user ORDER BY id DESC";
-    $result = mysqli_query($db, $query);
-    $id_desc = mysqli_fetch_assoc($result);
-    // jumlahkan data id_penduduk terakhir
-    $ai = $id_desc['id'] + 1;
-
-    // tetapkan auto incremet baru agar kembali terurut dari data sembelumnya
-    $query = "ALTER TABLE user auto_increment=$ai";
-    mysqli_query($db, $query);
-
-    if ($delete == false) { ?>
-        <script type='text/javascript'>
-            alert('Gagal Menghapus Data User <?php echo $id_desc['username'] ?>');
-            window.location.href = "../akun.php";
-        </script>
-    <?php } else { ?>
-        <script type='text/javascript'>
-            window.location.href = "../akun.php";
-        </script>
-<?php }
 }
 // login
 if ($opsi == "login") {

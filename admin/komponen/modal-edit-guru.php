@@ -10,6 +10,7 @@
                 <form action="controllers/guruControllers.php?opsi=edit" method="post" enctype="multipart/form-data">
                     <h5 class="fw-bolder">Preview Foto</h5>
                     <img src="<?php echo "../$pecah_path[1]" ?>" class="img-fluid mb-3" alt="...">
+                    <span class="text-danger">usahakan ukuran foto 1:1 atau Kotak</span>
                     <input type="text" name="id" class="form-control" id="id" value="<?php echo $guru['id'] ?>" hidden />
                     <div class="form-group mb-3">
                         <label for="foto" class="mb-1">Foto</label>

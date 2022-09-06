@@ -11,6 +11,7 @@
                     <div class="form-group mb-3">
                         <label for="foto" class="mb-1">Foto</label>
                         <input type="file" name="foto" class="form-control" id="foto" accept=".jpg,.jpeg" required />
+                        <span class="text-danger">usahakan ukuran foto 1:1 atau Kotak</span>
                     </div>
                     <div class="form-group mb-3">
                         <label for="nama" class="mb-1">Nama</label>
