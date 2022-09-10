@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2022 at 01:17 AM
+-- Generation Time: Sep 08, 2022 at 01:45 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -159,7 +159,7 @@ CREATE TABLE `seo` (
 --
 
 INSERT INTO `seo` (`author`, `description`, `keywords`, `robots_index`, `robots_follow`) VALUES
-('MI Nurul Hikmah Selolembu', 'Sekolah berlandaskan Syariat Islam yang di kelola oleh tenaga pengajar yang berkompeten di bidangnya. MI Nurul Hikmah Silolembu terletak di Kecamatan Curahdami, Desa Selolembu RT .. / RW ..', 'MI Nurul Hikmah,MI Nurul Hikmah Silolembu,Selolembu,Silolembu,Madrasah Selolembu,Curahdami', '1', '1');
+('MI Nurul Hikmah Silolembu', 'Sekolah berlandaskan Syariat Islam yang di kelola oleh tenaga pengajar yang berkompeten di bidangnya. MI Nurul Hikmah Silolembu terletak di Kecamatan Curahdami, Desa Selolembu RT .. / RW ..', 'MI Nurul Hikmah,MI Nurul Hikmah Silolembu,Selolembu,Silolembu,Madrasah Selolembu,Curahdami', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -198,7 +198,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(1, 'admin', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9');
+(1, 'Admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
 
 -- --------------------------------------------------------
 
@@ -257,7 +257,8 @@ ALTER TABLE `ucapan`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables

@@ -29,12 +29,9 @@
                 </ul>
             </div>
 
-            <!-- hubungi kami -->
-            <div class="hubungi col-12 col-md-3 text-center">
-                <h4 class="pb-4">Hubungi Kami</h4>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook fs-3 mx-3 mx-sm-2 mx-lg-3"></i></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram fs-3 mx-3 mx-sm-2 mx-lg-3"></i></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fs-3 mx-3 mx-sm-2 mx-lg-3"></i></a>
+            <!-- Peta Lokasi -->
+            <div class="col-12 col-md-3 text-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1574.2964082414012!2d113.78930783482839!3d-7.896932427572104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6dd0314ec381b%3A0x870b9789788e6fbd!2sMI%20Nurul%20Hikmah%20Silolembu!5e0!3m2!1sid!2sid!4v1662800042580!5m2!1sid!2sid" style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
