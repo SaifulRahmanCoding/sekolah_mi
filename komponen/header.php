@@ -12,7 +12,7 @@
     <div class="container">
         <nav class="navbar d-inline">
             <div class="top-header d-flex align-items-center">
-                <img src="assets/img/logo/logo-mi.jpg" alt="..." class="py-2 me-1">
+                <img src="assets/img/logo/logo-mi.png" alt="..." class="py-2 me-1">
                 <h3 class="m-0 ps-2 me-auto fw-bolder">MI Nurul Hikmah Silolembu</h3>
                 <ul class="nav-list">
                     <li><a href="index.php#" class="px-lg-2 mx-1 text-decoration-none text-dark"> Home </a></li>
