@@ -99,6 +99,39 @@ if ($jenis == "ucapan") {
             $query = mysqli_query($db, "UPDATE about SET foto='$filepath',keterangan='$keterangan'");
         }
     }
+} elseif ($jenis == "dataMinor") {
+    $telp = $_POST['telp'];
+    $email = $_POST['email'];
+    $alamat = $_POST['alamat'];
+
+    // mengambil data file upload
+    $files = $_FILES['logo'];
+    $path = "../../assets/img/logo/";
+
+    // file upload
+    if (!empty($files['name'])) {
+        $filepath = $path . $files['name'];
+        $upload = move_uploaded_file($files['tmp_name'], $filepath);
+    } else {
+        $upload = false;
+    }
+
+    // menangani error saat mengupload
+    if ($upload = false) {
+        $filepath = '../../assets/img/no_image.jpg';
+    }
+
+    $select = mysqli_query($db, "SELECT * FROM data_minor");
+    $jml = mysqli_num_rows($select);
+    if ($jml == 0) {
+        $query = mysqli_query($db, "INSERT INTO data_minor(logo,telp,email,alamat) VALUES ('$filepath','$telp','$email','$alamat')");
+    } else {
+        if ($files['name'] == "") {
+            $query = mysqli_query($db, "UPDATE data_minor SET telp='$telp',email = '$email',alamat='$alamat'");
+        } else {
+            $query = mysqli_query($db, "UPDATE data_minor SET logo='$filepath',telp='$telp',email = '$email',alamat='$alamat'");
+        }
+    }
 }
 
 if ($query == false) { ?>

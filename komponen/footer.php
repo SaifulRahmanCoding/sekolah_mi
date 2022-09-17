@@ -3,7 +3,7 @@
         <div class="row">
             <!-- copyright -->
             <div class="col-12 col-md-3 px-3 px-md-0 mb-4 mb-md-0">
-                <div class="col-12 d-flex align-items-center mb-4"><img src="assets/img/logo/logo-mi.png" alt="...">
+                <div class="col-12 d-flex align-items-center mb-4"><img src="<?php echo (empty($s_dMinor['logo'])) ? "assets/img/no_image.jpg" : "$pecah_path_dMinor[1]"; ?>" alt="...">
                     <h4 class="mx-3 mb-0">MI Nurul Hikmah</h4>
                 </div>
                 <div class="col-12 ">2022 © copyright by <span class="kopi-kanan">KKN Posko 21 Universitas Ibrahimy Situbondo.</span>

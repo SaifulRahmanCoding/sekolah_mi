@@ -29,10 +29,12 @@ require('cekLogin.php');
             <p class="mb-4">Pengaturan Lain Merupakan Pengaturan Data Yang Hanya Dapat Diperbaharui atau Diupdate Saja Tanpa Bisa Menghapus Maupun Menambah Data Yang Ada</p>
             <div class="row justify-content-center">
 
-                <a href="#ucapanModal" class="btn m-2 bg-primary text-decoration-none text-white" data-bs-toggle="modal"><i class="fa fa-cog"></i>&nbsp&nbsp Ucapan Landing Page</a>
-                <a href="#visiMisiModal" class="btn m-2 bg-primary text-decoration-none text-white" data-bs-toggle="modal"><i class="fa fa-cog"></i>&nbsp&nbsp Visi, Misi & Tujuan</a>
-                <a href="#aboutModal" class="btn m-2 bg-primary text-decoration-none text-white" data-bs-toggle="modal"><i class="fa fa-cog"></i>&nbsp&nbsp About</a>
-                <a href="#seoModal" class="btn m-2 bg-primary text-decoration-none text-white" data-bs-toggle="modal"><i class="fa fa-cog"></i>&nbsp&nbsp S.E.O</a>
+                <a href="#ucapanModal" class="shadow m-3 px-3 py-2 col-12 col-md-3 text-decoration-none text-dark" data-bs-toggle="modal"><i class="fa fa-cog"></i>&nbsp&nbsp Ucapan Landing Page</a>
+                <a href="#visiMisiModal" class="shadow m-3 px-3 py-2 col-12 col-md-3 text-decoration-none text-dark" data-bs-toggle="modal"><i class="fa fa-cog"></i>&nbsp&nbsp Visi, Misi & Tujuan</a>
+                <a href="#aboutModal" class="shadow m-3 px-3 py-2 col-12 col-md-3 text-decoration-none text-dark" data-bs-toggle="modal"><i class="fa fa-cog"></i>&nbsp&nbsp About</a>
+                <a href="#seoModal" class="shadow m-3 px-3 py-2 col-12 col-md-3 text-decoration-none text-dark" data-bs-toggle="modal"><i class="fa fa-cog"></i>&nbsp&nbsp S.E.O</a>
+                <a href="#dataMinor" class="shadow m-3 px-3 py-2 col-12 col-md-3 text-decoration-none text-dark" data-bs-toggle="modal"><i class="fa fa-cog"></i>&nbsp&nbsp Data Minor Website</a>
+
             </div>
 
             <?php
@@ -40,6 +42,7 @@ require('cekLogin.php');
             require('komponen/modal-seo.php');
             require('komponen/modal-visiMisi.php');
             require('komponen/modal-about.php');
+            require('komponen/modal-data-minor.php');
             ?>
 
         </div>

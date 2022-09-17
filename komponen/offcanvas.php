@@ -1,7 +1,7 @@
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="sub-header py-2 p-3">
         <div class="d-flex align-items-center">
-            <img src="assets/img/logo/logo-mi.jpg" alt="..." class="py-2 me-3" style="max-width: 50px;">
+            <img src="<?php echo (empty($s_dMinor['logo'])) ? "assets/img/no_image.jpg" : "$pecah_path_dMinor[1]"; ?>" alt="..." class="py-2 me-3" style="max-width: 50px;">
             <h5 class="offcanvas-title fw-bolder" id="offcanvasExampleLabel">MI Nurul Hikmah</h5>
             <button type="button" class="btn-close text-reset ms-auto bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -29,6 +29,6 @@
                 <a href="about.php" class="text-decoration-none text-dark fs-5"> About </a>
             </li>
         </ul>
-        
+
     </div>
 </div>

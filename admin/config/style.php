@@ -1,5 +1,9 @@
+<?php
+$s_dMinor = mysqli_fetch_assoc(mysqli_query($db, "SELECT * FROM data_minor"));
+$pecah_path_dMinor = (empty($s_dMinor['logo'])) ? "" : explode('../../', $s_dMinor['logo']);
+?>
 <!-- favicon -->
-<link rel="shortcut icon" href="../assets/img/logo/logo-mi.jpg">
+<link rel="shortcut icon" href="<?php echo (empty($s_dMinor['logo'])) ? "../assets/img/no_image.jpg" : "../$pecah_path_dMinor[1]"; ?>">
 <!-- include bootstrap -->
 <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
 <!-- include style costum -->

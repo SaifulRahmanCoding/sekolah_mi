@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2022 at 01:45 AM
+-- Generation Time: Sep 17, 2022 at 08:58 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -60,7 +60,28 @@ CREATE TABLE `carousel` (
 INSERT INTO `carousel` (`id`, `foto`, `judul`, `sub_judul`) VALUES
 (1, '../../assets/img/carousel/pengajar - Copy.jpg', 'TENAGA PENGAJAR YANG BERKOMPETEN DI BIDANGNYA', 'Mendidik Murid Sesuai Syari`at Islam'),
 (2, '../../assets/img/carousel/halaman-MINH.JPG', 'MADARASAH IBTIDAIYAH NURUL HIKMAH', 'Sekolah Berbasis Islam di Desa Selolembu'),
-(3, '../../assets/img/carousel/prestasi.jpg', 'PRESTASI', 'Memenangkan Lomba Pidato Bahasa Arab');
+(3, '../../assets/img/carousel/prestasi.jpg', 'PRESTASI', 'Memenangkan Lomba Pidato Bahasa Arab'),
+(4, '../../assets/img/carousel/KKN.jpg', 'Persembahan Dari Kami', ' Peserta KKN Posko 21 Tahun 2022');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_minor`
+--
+
+CREATE TABLE `data_minor` (
+  `logo` text NOT NULL,
+  `telp` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `alamat` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `data_minor`
+--
+
+INSERT INTO `data_minor` (`logo`, `telp`, `email`, `alamat`) VALUES
+('../../assets/img/logo/logo-mi.png', '085258183685', 'nurul.hikmah.cdm@gmail.com', 'Desa Selolembu, Kec. Curahdami, Kab. Bondowoso');
 
 -- --------------------------------------------------------
 
@@ -268,7 +289,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `carousel`
 --
 ALTER TABLE `carousel`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `dokumentasi`
